@@ -8,7 +8,8 @@ import joblib
 # --- Asumsi Data: Memuat data log yang sudah diproses menjadi numerik ---
 # Ganti 'web_logs_processed.csv' dengan path file Anda yang sudah siap
 try:
-    df = pd.read_csv('web_logs_processed.csv')
+    data_path = "hf://datasets/shengqin/web-attacks/train.csv"
+    df = pd.read_csv(data_path)
 except FileNotFoundError:
     print("Error: File 'web_logs_processed.csv' tidak ditemukan.")
     print("Pastikan Anda memiliki dataset log yang sudah diolah menjadi format numerik.")
